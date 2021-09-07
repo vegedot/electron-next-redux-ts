@@ -1,9 +1,4 @@
 import { contextBridge } from "electron";
+import Counter from "./bridges/counter";
 
-contextBridge.exposeInMainWorld("counter", {
-  fetchCount: (amount = 1): number => {
-    return new Promise<{ data: number }>((resolve) =>
-      setTimeout(() => resolve({ data: amount }), 500)
-    );
-  },
-});
+contextBridge.exposeInMainWorld("counter", Counter);
