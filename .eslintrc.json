@@ -18,9 +18,10 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "@typescript-eslint"],
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "next",
     "plugin:@next/next/recommended",
